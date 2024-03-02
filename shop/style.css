@@ -1411,9 +1411,13 @@ body {
   display: flex;
   width: 652px;
   height: 306px;
-  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+  border: 0.01px solid #cccaca;
   margin-bottom: 40px;
   position: relative;
+}
+
+.cart__cards-card:hover {
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
 }
 
 .cart__cards-card > img {
@@ -1450,7 +1454,15 @@ body {
   text-align: center;
   font-size: 18px;
   line-height: 22px;
-  color: #656565;
+  color: #F16D7F;
+}
+
+.cart__cards-card__input::-moz-placeholder {
+  color: #F16D7F;
+}
+
+.cart__cards-card__input::placeholder {
+  color: #F16D7F;
 }
 
 .card__delete {
@@ -1460,6 +1472,14 @@ body {
   top: 28px;
   right: 22px;
   cursor: pointer;
+}
+
+.close_icon path {
+  fill: #B1B1B1;
+}
+
+.close_icon:hover path {
+  fill: #F16D7F;
 }
 
 .cart__cards-btn {
@@ -1482,7 +1502,8 @@ body {
 }
 
 .cart__cards button:hover {
-  background-color: #A4A4A4;
+  background-color: #F16D7F;
+  border: 1px solid #F16D7F;
   color: #fff;
 }
 
@@ -1495,7 +1516,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
-  color: #222222;
+  color: #B1B1B1;
 }
 
 .card__adress {
@@ -1508,7 +1529,7 @@ body {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
-  color: #B1B1B1;
+  color: #222222;
   margin-top: 20px;
   padding: 0 17px;
   box-sizing: border-box;
@@ -1529,7 +1550,8 @@ body {
 }
 
 .cart__adress-btn:hover {
-  background-color: #A4A4A4;
+  background-color: #F16D7F;
+  border: 1px solid #F16D7F;
   color: #fff;
 }
 
