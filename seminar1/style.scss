@@ -49,7 +49,7 @@
     @include centerFlex(start);
 
     &__item {
-        width: $sizeWidthPage / 4;
+        width: calc($sizeWidthPage / 4);
         background-color: $colorPage;
         height: 200px;
         border: $borderSite;

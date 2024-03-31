@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    // background-image: url(img/eath.jpg);
+    background: url(img/eath.jpg) no-repeat center;
+    width: 100vw;
+    height: 100vh;
+    counter-reset: count;
+}
+
+svg {
+    width: 50px;
+    fill: yellow;
+}
+
+@keyframes lampRise-1 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: random(100) + vh;
+        left: random(100) + vw;
+        display: none;
+    }
+}
+
+@keyframes lampRise-2 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: random(80) + vh;
+        left: random(70) + vw;
+        display: none;
+    }
+}
+
+@keyframes lampRise-3 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: random(75) + vh;
+        right: random(50) + vw;
+        display: none;
+    }
+}
+
+.lamp {
+    position: absolute;
+
+    &__1 {
+        animation: lampRise-1 3s 0s both;
+    }
+
+    &__2 {
+        animation: lampRise-2 3s 3s both;
+    }
+
+    &__3 {
+        animation: lampRise-3 3s 6s both;
+    }
+
+    &__label {
+        &_input {
+            position: absolute;
+            visibility: hidden;
+            left: -9999999px;
+
+            &:checked {
+                counter-increment: count;
+            }
+        }
+    }
+}
+
+.counter-info {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    // font-size: 25px;
+    color: white;
+
+    &::before {
+        content: counter(count);
+    }
+}

@@ -1,0 +1,105 @@
+@keyframes duck-fly-1 {
+  0% {
+    left: -195px;
+    top: 39vh;
+  }
+  50% {
+    left: 55vw;
+    top: 63vh;
+  }
+  100% {
+    left: 100vw;
+    top: 9vh;
+  }
+}
+@keyframes duck-fly-2 {
+  0% {
+    left: -195px;
+    top: 90vh;
+  }
+  50% {
+    left: 10vw;
+    top: 61vh;
+  }
+  100% {
+    left: 100vw;
+    top: 79vh;
+  }
+}
+@keyframes duck-fly-3 {
+  0% {
+    left: -195px;
+    top: 77vh;
+  }
+  50% {
+    left: 60vw;
+    top: 16vh;
+  }
+  100% {
+    left: 100vw;
+    top: 12vh;
+  }
+}
+@keyframes duck-fly-4 {
+  0% {
+    left: -195px;
+    top: 63vh;
+  }
+  50% {
+    left: 46vw;
+    top: 61vh;
+  }
+  100% {
+    left: 100vw;
+    top: 79vh;
+  }
+}
+body {
+  counter-reset: count;
+  background-image: url(https://i.ytimg.com/vi/i9R8MqilMW8/maxresdefault.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+.duck-chek {
+  position: absolute;
+  visibility: hidden;
+  left: -9999999px;
+}
+.duck-chek:checked {
+  counter-increment: count;
+}
+.duck-chek:checked ~ label {
+  display: none;
+}
+
+.counter-info {
+  position: absolute;
+  top: 14px;
+  right: 24px;
+}
+.counter-info::before {
+  content: counter(count);
+}
+
+.duck {
+  position: absolute;
+}
+.duck__img {
+  width: 195px;
+}
+.duck_1 {
+  animation: duck-fly-1 10s cubic-bezier(0.39, 0.575, 0.565, 1) 1s both;
+}
+.duck_2 {
+  animation: duck-fly-2 10s cubic-bezier(0.39, 0.575, 0.565, 1) 2s both;
+}
+.duck_3 {
+  animation: duck-fly-3 10s cubic-bezier(0.39, 0.575, 0.565, 1) 3s both;
+}
+.duck_4 {
+  animation: duck-fly-4 10s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
+}/*# sourceMappingURL=style.css.map */

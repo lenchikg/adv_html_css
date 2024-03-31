@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(img/eath.jpg) no-repeat center;
+  width: 100vw;
+  height: 100vh;
+  counter-reset: count;
+}
+
+svg {
+  width: 50px;
+  fill: yellow;
+}
+
+@keyframes lampRise-1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 2vh;
+    left: 90vw;
+    display: none;
+  }
+}
+@keyframes lampRise-2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 66vh;
+    left: 21vw;
+    display: none;
+  }
+}
+@keyframes lampRise-3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 34vh;
+    right: 26vw;
+    display: none;
+  }
+}
+.lamp {
+  position: absolute;
+}
+.lamp__1 {
+  animation: lampRise-1 3s 0s both;
+}
+.lamp__2 {
+  animation: lampRise-2 3s 3s both;
+}
+.lamp__3 {
+  animation: lampRise-3 3s 6s both;
+}
+.lamp__label_input {
+  position: absolute;
+  visibility: hidden;
+  left: -9999999px;
+}
+.lamp__label_input:checked {
+  counter-increment: count;
+}
+
+.counter-info {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+}
+.counter-info::before {
+  content: counter(count);
+}/*# sourceMappingURL=style.css.map */
